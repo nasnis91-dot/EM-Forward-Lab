@@ -25,9 +25,13 @@ def _stations(width, n=21):
     return list(np.round(np.linspace(0.05 * width, 0.95 * width, n), 1))
 
 
-def preset_2d(name: str, bg=100.0, anom=10.0, a_width=1000.0, a_top=200.0, a_thick=400.0,
+def preset_2d(name: str, bg=None, anom=None, a_width=1000.0, a_top=200.0, a_thick=400.0,
               width=4000.0, depth=2000.0, dx=25.0, dz=25.0) -> Model2D:
-    """Build a 2D preset. The anomaly parameters are used where meaningful."""
+    """Build a 2D preset. The anomaly parameters are used where meaningful.
+    bg / anom default to the preset's own values (PRESET_2D_DEFAULTS)."""
+    d_bg, d_an = PRESET_2D_DEFAULTS.get(name[:1], (100.0, 10.0))
+    bg = d_bg if bg is None else bg
+    anom = d_an if anom is None else anom
     cx = width / 2
     m = Model2D(title=name, width=width, depth=depth, dx=dx, dz=dz, bg_rho=[bg], bg_thick=[],
                 stations=_stations(width))
