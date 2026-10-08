@@ -1,0 +1,21 @@
+{
+  "type": "EM-Forward Lab 1D model",
+  "credit": "Developed by Yanis Mawardinur for Academic Purpose",
+  "model": {
+    "title": "Model E - Interpretation exercise",
+    "rho_ohmm": [
+      100.0,
+      5.0,
+      1000.0
+    ],
+    "thickness_m": [
+      50.0,
+      200.0
+    ],
+    "names": [
+      "Top soil",
+      "Conductive clay",
+      "Basement"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "EM-Forward Lab 1D model",
+  "credit": "Developed by Yanis Mawardinur for Academic Purpose",
+  "model": {
+    "title": "Model B - Conductive layer",
+    "rho_ohmm": [
+      100.0,
+      10.0,
+      500.0
+    ],
+    "thickness_m": [
+      200.0,
+      300.0
+    ],
+    "names": [
+      "Overburden",
+      "Conductive layer",
+      "Basement"
+    ]
+  }
+}

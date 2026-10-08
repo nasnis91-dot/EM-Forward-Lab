@@ -1,0 +1,14 @@
+{
+  "type": "EM-Forward Lab 1D model",
+  "credit": "Developed by Yanis Mawardinur for Academic Purpose",
+  "model": {
+    "title": "Model A - Homogeneous earth",
+    "rho_ohmm": [
+      100.0
+    ],
+    "thickness_m": [],
+    "names": [
+      "Half-space"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "EM-Forward Lab 1D model",
+  "credit": "Developed by Yanis Mawardinur for Academic Purpose",
+  "model": {
+    "title": "Model C - Resistive layer",
+    "rho_ohmm": [
+      20.0,
+      1000.0,
+      50.0
+    ],
+    "thickness_m": [
+      200.0,
+      300.0
+    ],
+    "names": [
+      "Conductive cover",
+      "Resistive layer",
+      "Half-space"
+    ]
+  }
+}
