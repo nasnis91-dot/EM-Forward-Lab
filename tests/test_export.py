@@ -14,7 +14,7 @@ def test_csv_roundtrip(tmp_path):
     r = forward_1d([100, 10, 500], [200, 300], f)
     p = tmp_path / "a.csv"
     write_csv(p, frame_1d(f, r["Z"]), metadata(method="MT"))
-    assert CREDIT in p.read_text()
+    assert CREDIT in p.read_text(encoding="utf-8")
     df = pd.read_csv(p, comment="#")
     assert list(df.columns) == COLS_1D
     assert np.allclose(df["Apparent_Resistivity_OhmM"], r["rho_a"], rtol=1e-7)
@@ -32,7 +32,7 @@ def test_edi_roundtrip_and_units(tmp_path):
     # field-unit check: rho_a = 0.2 T |Z_field|^2
     zf = np.abs(r["Z"][o]) * SI_TO_FIELD
     assert np.allclose(0.2 / ff * zf ** 2, 100.0, rtol=1e-6)
-    txt = p.read_text()
+    txt = p.read_text(encoding="utf-8")
     assert ">END" in txt and "Yanis Mawardinur" in txt
 
 
